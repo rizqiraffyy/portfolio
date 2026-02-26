@@ -294,7 +294,9 @@ const about: About = {
       {
         title: "Internet of Things (IoT)",
         description: (
-          <>Building next gen apps with Next.js + Once UI + Supabase.</>
+          <>
+            Building IoT modules for monitoring systems (ESP32 + sensors), bridging hardware signals into cloud-ready web dashboards.
+          </>
         ),
         tags: [
           {
