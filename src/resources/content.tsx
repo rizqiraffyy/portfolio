@@ -2,18 +2,18 @@ import { About, Blog, Gallery, Home, Newsletter, Person, Social, Work } from "@/
 import { Line, Row, Text } from "@once-ui-system/core";
 
 const person: Person = {
-  firstName: "Selene",
-  lastName: "Yu",
-  name: `Selene Yu`,
-  role: "Design Engineer",
+  firstName: "Rizqi",
+  lastName: "Raffy",
+  name: `Rizqi Raffy Imam Malik`,
+  role: "Software Engineer",
   avatar: "/images/avatar.jpg",
-  email: "example@gmail.com",
+  email: "rizqiraffy@gmail.com",
   location: "Asia/Jakarta", // Expecting the IANA time zone identifier, e.g., 'Europe/Vienna'
   languages: ["English", "Bahasa"], // optional: Leave the array empty if you don't want to display languages
 };
 
 const newsletter: Newsletter = {
-  display: true,
+  display: false,
   title: <>Subscribe to {person.firstName}'s Newsletter</>,
   description: <>My weekly newsletter about creativity and engineering</>,
 };
@@ -25,26 +25,26 @@ const social: Social = [
   {
     name: "GitHub",
     icon: "github",
-    link: "https://github.com/once-ui-system",
+    link: "https://github.com/rizqiraffyy",
     essential: true,
   },
   {
     name: "LinkedIn",
     icon: "linkedin",
-    link: "https://www.linkedin.com/company/once-ui/",
+    link: "https://www.linkedin.com/in/rizqiraffy/",
     essential: true,
   },
   {
     name: "Instagram",
     icon: "instagram",
-    link: "https://www.instagram.com/once_ui/",
+    link: "https://www.instagram.com/rizqiraffy/",
     essential: false,
   },
   {
     name: "Threads",
     icon: "threads",
-    link: "https://www.threads.com/@once_ui",
-    essential: true,
+    link: "https://www.threads.com/@rizqiraffy",
+    essential: false,
   },
   {
     name: "Email",
@@ -56,28 +56,28 @@ const social: Social = [
 
 const home: Home = {
   path: "/",
-  image: "/images/og/home.jpg",
+  image: "/images/growt/dashboard.jpg",
   label: "Home",
   title: `${person.name}'s Portfolio`,
-  description: `Portfolio website showcasing my work as a ${person.role}`,
-  headline: <>Building bridges between design and code</>,
+  description: `Portfolio showcasing my work as a ${person.role}`,
+  headline: <>Building realible software systems for real-world applications</>,
   featured: {
-    display: true,
+    display: false,
     title: (
       <Row gap="12" vertical="center">
-        <strong className="ml-4">Once UI</strong>{" "}
+        <strong className="ml-4">Featured</strong>{" "}
         <Line background="brand-alpha-strong" vert height="20" />
         <Text marginRight="4" onBackground="brand-medium">
-          Featured work
+          Selected project
         </Text>
       </Row>
     ),
-    href: "/work/building-once-ui-a-customizable-design-system",
+    href: "/work/growt",
   },
   subline: (
     <>
-    I'm Selene, a design engineer at <Text as="span" size="xl" weight="strong">ONCE UI</Text>, where I craft intuitive <br /> user experiences. After hours, I build my own projects.
-</>
+    I'm Rizqi, a <Text as="span" weight="strong">Software Engineer</Text> and fresh graduate from{""} <Text as="span" size= "xl" weight="strong">Universitas Gadjah Mada</Text>. <br />
+    </>
   ),
 };
 
@@ -102,9 +102,7 @@ const about: About = {
     title: "Introduction",
     description: (
       <>
-        Selene is a Jakarta-based design engineer with a passion for transforming complex challenges
-        into simple, elegant design solutions. Her work spans digital interfaces, interactive
-        experiences, and the convergence of design and technology.
+        Dedicated and detail-oriented Software Engineer with strong expertise in web development, data visualization, and integrated IoT monitoring systems. Experienced in building full-stack web platforms using modern frameworks, focusing on creating responsive, interactive, and data-driven user interfaces. Known for adaptability, effective collaboration, and problem-solving skills, I am passionate about developing innovative technologies and delivering well-structured solutions that contribute meaningfully to the advancement of software and system development.
       </>
     ),
   },
@@ -113,41 +111,78 @@ const about: About = {
     title: "Work Experience",
     experiences: [
       {
-        company: "FLY",
-        timeframe: "2022 - Present",
-        role: "Senior Design Engineer",
+        company: "Badan Riset dan Inovasi Nasional (BRIN)",
+        timeframe: "February 2025 - June 2025",
+        role: "Intern Frontend Developer",
         achievements: [
           <>
-            Redesigned the UI/UX for the FLY platform, resulting in a 20% increase in user
-            engagement and 30% faster load times.
+            Developed an interactive web dashboard to visualize real-time IoT air quality index using{" "}
+            <strong>Next.js</strong> and <strong>Leaflet</strong> through
+            dynamic charts, tables, and heatmaps.
           </>,
           <>
-            Spearheaded the integration of AI tools into design workflows, enabling designers to
-            iterate 50% faster.
+            Integrated <strong>Supabase (PostgreSQL)</strong> for storage and API access, ensuring accurate
+            data synchronization for real-time monitoring workflows.
+          </>,
+          <>
+            Delivered a responsive, user-friendly interface optimized for performance and usability in
+            data visualization-heavy pages.
           </>,
         ],
         images: [
           // optional: leave the array empty if you don't want to display images
           {
-            src: "/images/projects/project-01/cover-01.jpg",
-            alt: "Once UI Project",
-            width: 16,
-            height: 9,
+            src: "/images/work/brin/certif.jpg",
+            alt: "BRIN Internship Certificate",
+            width: 9,
+            height: 14,
           },
         ],
       },
       {
-        company: "Creativ3",
-        timeframe: "2018 - 2022",
-        role: "Lead Designer",
+        company: "AMX UAV Technologies",
+        timeframe: "August 2024 - January 2025",
+        role: "Intern Full Stack Developer",
         achievements: [
           <>
-            Developed a design system that unified the brand across multiple platforms, improving
-            design consistency by 40%.
+            Designed and developed a web platform using <strong>PHP</strong> and <strong>JavaScript</strong>{" "}
+            integrated with <strong>Supabase (PostgreSQL)</strong> to manage IoT livestock weighing systems.
           </>,
           <>
-            Led a cross-functional team to launch a new product line, contributing to a 15% increase
-            in overall company revenue.
+            Enabled monitoring of livestock weight, health, and condition through structured records and a
+            dashboard-oriented interface for farm operations.
+          </>,
+          <>
+            Built IoT components using <strong>ESP32</strong>, <strong>load cells</strong>, and{" "}
+            <strong>RFID</strong> for data acquisition and visualization workflows.
+          </>,
+        ],
+        images: [
+          // optional: leave the array empty if you don't want to display images
+          {
+            src: "/images/work/amx/certif.jpg",
+            alt: "AMX Internship Certificate",
+            width: 14,
+            height: 10,
+          },
+        ],
+      },
+      {
+        company: "PT PLN (Persero)",
+        timeframe: "July 2024 - August 2024",
+        role: "Intern Distribution System Planner",
+        achievements: [
+          <>
+            Conducted research on <strong>Disaster Recovery Center (DRC)</strong> and{" "}
+            <strong>microgrid</strong> systems to improve reliability and resilience of power network operations.
+          </>,
+          <>
+            Analyzed system architecture, backup power strategies, and data recovery mechanisms to support
+            operational continuity during disruptions.
+          </>,
+          <>
+            Contributed to evaluating smart grid integration and renewable energy potential within microgrid
+            infrastructures.
           </>,
         ],
         images: [],
@@ -156,15 +191,15 @@ const about: About = {
   },
   studies: {
     display: true, // set to false to hide this section
-    title: "Studies",
+    title: "Education",
     institutions: [
       {
-        name: "University of Jakarta",
-        description: <>Studied software engineering.</>,
+        name: "Universitas Gajah Mada",
+        description: <>B.Sc. Electronics and Instrumentation · GPA: 3.50</>,
       },
       {
-        name: "Build the Future",
-        description: <>Studied online marketing and personal branding.</>,
+        name: "SMA Negeri 70 Jakarta",
+        description: <>High School, Math and Natural Sciences · Gade:86.77</>,
       },
     ],
   },
@@ -173,36 +208,11 @@ const about: About = {
     title: "Technical skills",
     skills: [
       {
-        title: "Figma",
+        title: "Web Development",
         description: (
-          <>Able to prototype in Figma with Once UI with unnatural speed.</>
-        ),
-        tags: [
-          {
-            name: "Figma",
-            icon: "figma",
-          },
-        ],
-        // optional: leave the array empty if you don't want to display images
-        images: [
-          {
-            src: "/images/projects/project-01/cover-02.jpg",
-            alt: "Project image",
-            width: 16,
-            height: 9,
-          },
-          {
-            src: "/images/projects/project-01/cover-03.jpg",
-            alt: "Project image",
-            width: 16,
-            height: 9,
-          },
-        ],
-      },
-      {
-        title: "Next.js",
-        description: (
-          <>Building next gen apps with Next.js + Once UI + Supabase.</>
+          <>
+            Building responsive dashboards with charts, tables, and maps for monitoring systems (including IoT telemetry).
+          </>
         ),
         tags: [
           {
@@ -217,12 +227,119 @@ const about: About = {
             name: "Supabase",
             icon: "supabase",
           },
+          {
+            name: "Leaflet",
+            icon: "leaflet",
+          },
+          {
+            name: "PHP",
+            icon: "php",
+          },
         ],
         // optional: leave the array empty if you don't want to display images
         images: [
           {
-            src: "/images/projects/project-01/cover-04.jpg",
-            alt: "Project image",
+            src: "/images/growt/dashboard.png",
+            alt: "GROWT Dashboard",
+            width: 16,
+            height: 9,
+          },
+          {
+            src: "/images/work/brin/dashboard.png",
+            alt: "IoT Air Quality Dashboard (BRIN)",
+            width: 16,
+            height: 9,
+          },
+        ],
+      },
+      {
+        title: "Backend Integration & Database",
+        description: (
+          <>
+            Integrating APIs and relational storage using Supabase (PostgreSQL), with structured validation and data access patterns.
+          </>
+        ),
+        tags: [
+          {
+            name: "Supabase",
+            icon: "supabase",
+          },
+          {
+            name: "PostgreSQL",
+            icon: "postgresql",
+          },
+          {
+            name: "PHP",
+            icon: "php",
+          },
+          {
+            name: "REST APIs",
+            icon: "api",
+          },
+          {
+            name: "Vercel",
+            icon: "vercel",
+          }
+        ],
+        // optional: leave the array empty if you don't want to display images
+        images: [
+          {
+            src: "/images/growt/iot-testing.png",
+            alt: "IoT Ingestion Testing",
+            width: 16,
+            height: 9,
+          },
+        ],
+      },
+      {
+        title: "Internet of Things (IoT)",
+        description: (
+          <>Building next gen apps with Next.js + Once UI + Supabase.</>
+        ),
+        tags: [
+          {
+            name: "Microcontrollers",
+            icon: "microchip",
+          },
+          {
+            name: "Sensors",
+            icon: "sensors",
+          },
+          {
+            name: "Arduino",
+            icon: "arduino",
+          }
+        ],
+        // optional: leave the array empty if you don't want to display images
+        images: [
+          {
+            src: "/images/growt/weightscale.png",
+            alt: "Smart Weighing Device",
+            width: 16,
+            height: 9,
+          },
+        ],
+      },
+      {
+        title: "Hardware / EDA & 3D",
+        description: (
+          <>Creating immersive 3D experiences with Autodesk Fusion and Eagle.</>
+        ),
+        tags: [
+          {
+            name: "Autodesk Fusion",
+            icon: "autodesk",
+          },
+          {
+            name: "KiCad",
+            icon: "kicad",
+          },
+        ],
+        // optional: leave the array empty if you don't want to display images
+        images: [
+          {
+            src: "/images/growt/pcb.jpeg",
+            alt: "PCB Design",
             width: 16,
             height: 9,
           },
@@ -235,8 +352,8 @@ const about: About = {
 const blog: Blog = {
   path: "/blog",
   label: "Blog",
-  title: "Writing about design and tech...",
-  description: `Read what ${person.name} has been up to recently`,
+  title: "Writing about engineering and product building...",
+  description: `Read what ${person.name} has building and learning`,
   // Create new blog posts by adding a new .mdx file to app/blog/posts
   // All posts will be listed on the /blog route
 };
@@ -245,7 +362,7 @@ const work: Work = {
   path: "/work",
   label: "Work",
   title: `Projects – ${person.name}`,
-  description: `Design and dev projects by ${person.name}`,
+  description: `Selected projects and case studies by ${person.name}`,
   // Create new project pages by adding a new .mdx file to app/blog/posts
   // All projects will be listed on the /home and /work routes
 };

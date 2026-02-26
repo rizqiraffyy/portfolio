@@ -1,0 +1,98 @@
+---
+title: "Growth Recording of Weight Tracking (GROWT)"
+publishedAt: "2026-02-26"
+summary: "A full-stack web platform that integrates IoT weighing hardware with a secure cloud-based livestock monitoring system."
+images:
+  - "/images/growt/dashboard.png"
+  - "/images/growt/landing.png"
+  - "/images/growt/iot-testing.png"
+team:
+  - name: "Rizqi Raffy"
+    role: "Full-Stack Engineer"
+    avatar: "/images/avatar.jpg"
+    linkedIn: "https://www.linkedin.com/in/rizqiraffy/"
+link: "https://growt-farm.vercel.app/"
+---
+
+## Overview
+
+GROWT is a web-based livestock weight monitoring platform that integrates directly with an IoT weighing system (ESP32 + load cell + RFID).  
+
+Unlike typical CRUD-based dashboards, this platform is built around a real hardware-to-cloud pipeline. Weight data is collected from physical devices, transmitted via HTTP, validated at the application layer, and stored in a relational cloud database before being visualized in a monitoring dashboard.
+
+The main technical highlight of this project is the secure integration between hardware (IoT) and a production-grade full-stack web system.
+
+---
+
+## Key Features
+
+- **IoT-to-Cloud Data Pipeline**  
+  Built a dedicated ingestion endpoint (`/api/iot/weights`) that receives structured JSON payloads from ESP32 devices. The system validates API keys, payload schema, device status, and ownership relations before inserting data into PostgreSQL.
+
+- **Secure Device Authorization Layer**  
+  Implemented API key-based hardware authentication combined with relational ownership verification (device ↔ livestock ↔ user). Only approved and active devices are allowed to submit data.
+
+- **Relational Data Integrity with RLS**  
+  Designed a PostgreSQL schema (`users → devices → livestocks → weights`) with foreign key constraints and Row Level Security (RLS) to enforce strict ownership isolation at the database level.
+
+- **Server-Side Business Logic Processing**  
+  All derived computations (age calculation, growth delta, growth classification, trend indicators) are processed server-side to ensure consistency and prevent frontend duplication.
+
+- **Device Lifecycle Management**  
+  Built a device approval workflow (pending → active → inactive/revoked) to control which physical hardware can interact with the system.
+
+- **Public / Private Data Visibility Control**  
+  Implemented selective public exposure (`is_public`) without breaking ownership constraints.
+
+---
+
+## Technologies Used
+
+- **Next.js (Full-Stack, App Router)**  
+  Handles both frontend rendering and backend API Routes within a unified architecture.
+
+- **Supabase (PostgreSQL + Auth + RLS)**  
+  Provides authentication, relational storage, and database-level access control.
+
+- **ESP32 + Load Cell + HX711 + RFID RC522**  
+  Hardware layer for weight acquisition and livestock identification.
+
+- **TypeScript & Zod**  
+  Enforces strict payload validation and type safety for ingestion endpoints.
+
+- **Vercel**  
+  Serverless deployment and production monitoring.
+
+---
+
+## Challenges and Learnings
+
+One of the main challenges was designing a secure ingestion architecture where IoT devices do not use user sessions but still must respect ownership boundaries. Since the service role bypasses database-level RLS, ownership validation had to be explicitly enforced at the application layer before insertion.
+
+Another challenge was maintaining two parallel access models:
+- JWT-based session access for users
+- API key–based access for hardware devices
+
+Balancing these two models while preserving relational integrity required careful architectural separation between user-bound operations and hardware-bound ingestion logic.
+
+This project strengthened my understanding of:
+- Secure IoT ingestion design
+- Database-level access enforcement
+- Fail-fast validation patterns
+- Hardware–software integration in production environments
+
+---
+
+## Outcome
+
+GROWT demonstrates a production-ready IoT-integrated web architecture where physical hardware communicates securely with a cloud backend and a full-stack monitoring dashboard.
+
+The project goes beyond standard web development by integrating:
+
+- Real hardware communication
+- Deterministic validation pipelines
+- Strict relational modeling
+- Database-level ownership enforcement
+- Load-tested ingestion endpoint (~99.9% success rate)
+
+This integration between IoT hardware and a secure full-stack web platform is the core technical value of the project.

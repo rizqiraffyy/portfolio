@@ -27,9 +27,36 @@ import {
   SiNextdotjs,
   SiFigma,
   SiSupabase,
+  SiTypescript,
+  SiLeaflet,
+  SiShadcnui,
+  SiAutodesk,
+  SiKicad,
+  SiArduino,
+  SiVercel,
 } from "react-icons/si";
 
-import { FaDiscord, FaGithub, FaLinkedin, FaX, FaThreads, FaInstagram, FaXTwitter, FaFacebook, FaPinterest, FaWhatsapp, FaReddit, FaTelegram, } from "react-icons/fa6";
+import { 
+  FaDiscord, 
+  FaGithub, 
+  FaLinkedin, 
+  FaX, 
+  FaThreads, 
+  FaInstagram, 
+  FaXTwitter, 
+  FaFacebook, 
+  FaPinterest, 
+  FaWhatsapp, 
+  FaReddit, 
+  FaTelegram, 
+  FaMicrochip,
+  FaPhp,
+} from "react-icons/fa6";
+
+import { MdSensors } from "react-icons/md";
+import { TbApiApp } from "react-icons/tb";
+import { DiPostgresql } from "react-icons/di";
+import { BiRfid } from "react-icons/bi";
 
 export const iconLibrary: Record<string, IconType> = {
   arrowUpRight: HiArrowUpRight,
@@ -55,15 +82,28 @@ export const iconLibrary: Record<string, IconType> = {
   document: HiOutlineDocument,
   rocket: HiOutlineRocketLaunch,
   javascript: SiJavascript,
+  typescript: SiTypescript,
+  leaflet: SiLeaflet,
+  shadcnui: SiShadcnui,
   nextjs: SiNextdotjs,
   supabase: SiSupabase,
   figma: SiFigma,
+  kicad: SiKicad,
+  autodesk: SiAutodesk,
+  arduino:SiArduino,
+  vercel: SiVercel,
   facebook: FaFacebook,
   pinterest: FaPinterest,
   whatsapp: FaWhatsapp,
   reddit: FaReddit,
   telegram: FaTelegram,
   instagram: FaInstagram,
+  microchip: FaMicrochip,
+  php: FaPhp,
+  sensors: MdSensors,
+  api: TbApiApp,
+  postgresql: DiPostgresql,
+  rfid: BiRfid,
 };
 
 export type IconLibrary = typeof iconLibrary;
