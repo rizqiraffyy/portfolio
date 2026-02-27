@@ -39,6 +39,7 @@ import {
 import { 
   FaDiscord, 
   FaGithub, 
+  FaReact,
   FaLinkedin, 
   FaX, 
   FaThreads, 
@@ -51,12 +52,15 @@ import {
   FaTelegram, 
   FaMicrochip,
   FaPhp,
+  FaNodeJs,
 } from "react-icons/fa6";
 
 import { MdSensors } from "react-icons/md";
 import { TbApiApp } from "react-icons/tb";
 import { DiPostgresql } from "react-icons/di";
 import { BiRfid } from "react-icons/bi";
+import { BsFiletypeSql } from "react-icons/bs";
+import { FaGitAlt } from "react-icons/fa";
 
 export const iconLibrary: Record<string, IconType> = {
   arrowUpRight: HiArrowUpRight,
@@ -76,6 +80,7 @@ export const iconLibrary: Record<string, IconType> = {
   github: FaGithub,
   linkedin: FaLinkedin,
   x: FaX,
+  nodejs: FaNodeJs,
   twitter: FaXTwitter,
   threads: FaThreads,
   arrowUpRightFromSquare: HiArrowTopRightOnSquare,
@@ -99,11 +104,14 @@ export const iconLibrary: Record<string, IconType> = {
   telegram: FaTelegram,
   instagram: FaInstagram,
   microchip: FaMicrochip,
+  react: FaReact,
   php: FaPhp,
+  git: FaGitAlt,
   sensors: MdSensors,
   api: TbApiApp,
   postgresql: DiPostgresql,
   rfid: BiRfid,
+  sql: BsFiletypeSql,
 };
 
 export type IconLibrary = typeof iconLibrary;

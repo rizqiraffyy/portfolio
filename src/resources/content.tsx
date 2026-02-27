@@ -15,7 +15,7 @@ const person: Person = {
 const newsletter: Newsletter = {
   display: false,
   title: <>Subscribe to {person.firstName}'s Newsletter</>,
-  description: <>My weekly newsletter about creativity and engineering</>,
+  description: <>Engineering notes and project insights</>,
 };
 
 const social: Social = [
@@ -60,9 +60,9 @@ const home: Home = {
   label: "Home",
   title: `${person.name}'s Portfolio`,
   description: `Portfolio showcasing my work as a ${person.role}`,
-  headline: <>Building realible software systems for real-world applications</>,
+  headline: <>Building reliable software systems for real-world applications</>,
   featured: {
-    display: false,
+    display: true,
     title: (
       <Row gap="12" vertical="center">
         <strong className="ml-4">Featured</strong>{" "}
@@ -76,7 +76,7 @@ const home: Home = {
   },
   subline: (
     <>
-    I'm Rizqi, a <Text as="span" weight="strong">Software Engineer</Text> and fresh graduate from{""} <Text as="span" size= "xl" weight="strong">Universitas Gadjah Mada</Text>. <br />
+    I'm Rizqi, a <Text as="span" weight="strong">Software Engineer</Text> and fresh graduate from{" "} <Text as="span" size= "xl" weight="strong">Universitas Gadjah Mada</Text>. <br />
     </>
   ),
 };
@@ -94,7 +94,7 @@ const about: About = {
     display: true,
   },
   calendar: {
-    display: true,
+    display: false,
     link: "https://cal.com",
   },
   intro: {
@@ -102,7 +102,13 @@ const about: About = {
     title: "Introduction",
     description: (
       <>
-        Dedicated and detail-oriented Software Engineer with strong expertise in web development, data visualization, and integrated IoT monitoring systems. Experienced in building full-stack web platforms using modern frameworks, focusing on creating responsive, interactive, and data-driven user interfaces. Known for adaptability, effective collaboration, and problem-solving skills, I am passionate about developing innovative technologies and delivering well-structured solutions that contribute meaningfully to the advancement of software and system development.
+        Software Engineer with hands-on experience building full-stack web applications using{" "}
+        Next.js, React, TypeScript, and Supabase (PostgreSQL). Focused on backend integration, relational database design,
+        authentication-based access control, and responsive dashboards for data-driven products.
+        <br /> 
+        <br />
+        Experienced in automation and monitoring systems that bridge real-world signals into cloud-connected
+        software platforms.
       </>
     ),
   },
@@ -116,17 +122,17 @@ const about: About = {
         role: "Intern Frontend Developer",
         achievements: [
           <>
-            Developed an interactive web dashboard to visualize real-time IoT air quality index using{" "}
-            <strong>Next.js</strong> and <strong>Leaflet</strong> through
-            dynamic charts, tables, and heatmaps.
+            Built a real-time monitoring dashboard using <strong>Next.js</strong>, <strong>React</strong>,
+            and <strong>TypeScript</strong>, with interactive geospatial visualization using{" "}
+            <strong>Leaflet</strong>.
           </>,
           <>
-            Integrated <strong>Supabase (PostgreSQL)</strong> for storage and API access, ensuring accurate
-            data synchronization for real-time monitoring workflows.
+            Integrated <strong>Supabase (PostgreSQL)</strong> for structured storage and API access to
+            support near real-time data synchronization.
           </>,
           <>
-            Delivered a responsive, user-friendly interface optimized for performance and usability in
-            data visualization-heavy pages.
+            Delivered a responsive UI optimized for performance on data visualization-heavy pages (charts,
+            tables, and heatmaps).
           </>,
         ],
         images: [
@@ -145,8 +151,8 @@ const about: About = {
         role: "Intern Full Stack Developer",
         achievements: [
           <>
-            Designed and developed a web platform using <strong>PHP</strong> and <strong>JavaScript</strong>{" "}
-            integrated with <strong>Supabase (PostgreSQL)</strong> to manage IoT livestock weighing systems.
+            Developed a full-stack web platform using <strong>PHP</strong> and <strong>JavaScript</strong>,
+            integrated with <strong>Supabase (PostgreSQL)</strong>.
           </>,
           <>
             Enabled monitoring of livestock weight, health, and condition through structured records and a
@@ -194,12 +200,12 @@ const about: About = {
     title: "Education",
     institutions: [
       {
-        name: "Universitas Gajah Mada",
+        name: "Universitas Gadjah Mada",
         description: <>B.Sc. Electronics and Instrumentation · GPA: 3.50</>,
       },
       {
         name: "SMA Negeri 70 Jakarta",
-        description: <>High School, Math and Natural Sciences · Gade:86.77</>,
+        description: <>High School, Math and Natural Sciences · Grade:86.77</>,
       },
     ],
   },
@@ -211,10 +217,15 @@ const about: About = {
         title: "Web Development",
         description: (
           <>
-            Building responsive dashboards with charts, tables, and maps for monitoring systems (including IoT telemetry).
+            Building responsive dashboards with charts, tables, and maps for monitoring and analytics use
+            cases.
           </>
         ),
         tags: [
+          {
+            name: "Typescript",
+            icon: "typescript",
+          },
           {
             name: "JavaScript",
             icon: "javascript",
@@ -224,16 +235,12 @@ const about: About = {
             icon: "nextjs",
           },
           {
-            name: "Supabase",
-            icon: "supabase",
+            name: "React",
+            icon: "react",
           },
           {
             name: "Leaflet",
             icon: "leaflet",
-          },
-          {
-            name: "PHP",
-            icon: "php",
           },
         ],
         // optional: leave the array empty if you don't want to display images
@@ -256,7 +263,8 @@ const about: About = {
         title: "Backend Integration & Database",
         description: (
           <>
-            Integrating APIs and relational storage using Supabase (PostgreSQL), with structured validation and data access patterns.
+            Integrating REST APIs and relational storage using Supabase (PostgreSQL), with schema-oriented
+            data modeling and access control.
           </>
         ),
         tags: [
@@ -269,16 +277,16 @@ const about: About = {
             icon: "postgresql",
           },
           {
-            name: "PHP",
-            icon: "php",
+            name: "Node.js",
+            icon: "nodejs",
           },
           {
             name: "REST APIs",
             icon: "api",
           },
           {
-            name: "Vercel",
-            icon: "vercel",
+            name: "Git",
+            icon: "git",
           }
         ],
         // optional: leave the array empty if you don't want to display images
@@ -308,8 +316,8 @@ const about: About = {
             icon: "sensors",
           },
           {
-            name: "Arduino",
-            icon: "arduino",
+            name: "Data Ingestion",
+            icon: "api",
           }
         ],
         // optional: leave the array empty if you don't want to display images
@@ -323,9 +331,12 @@ const about: About = {
         ],
       },
       {
-        title: "Hardware / EDA & 3D",
+        title: "Hardware Prototyping & 3D",
         description: (
-          <>Creating immersive 3D experiences with Autodesk Fusion and Eagle.</>
+          <>
+            Hardware prototyping for automation devices, including PCB design and enclosure 3D modeling for
+            deployment-ready builds.
+          </>
         ),
         tags: [
           {
@@ -355,7 +366,7 @@ const blog: Blog = {
   path: "/blog",
   label: "Blog",
   title: "Writing about engineering and product building...",
-  description: `Read what ${person.name} has building and learning`,
+  description: `Read what ${person.name} has been building and learning`,
   // Create new blog posts by adding a new .mdx file to app/blog/posts
   // All posts will be listed on the /blog route
 };
